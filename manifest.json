@@ -3,7 +3,6 @@
   "name": "STS-SLEEP",
   "version": "1.0.0",
 
-  "default_locale": "en",
   "description": "You have just one mission: sleep on schedule.",
 
   "chrome_url_overrides": {

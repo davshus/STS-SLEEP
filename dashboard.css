@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+}
+.space {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: #232323;
+}
+.magnified-display {
+    height: 300px;
+    width: 300px;
+    position: fixed;
+    display: block;
+    bottom: 0;
+    left: 0;
+    background: black;
+    border-top: #a9a9a9 1px solid;
+    border-right: #a9a9a9 1px solid;
+    z-index: 10000;
+}
+.orbit {
+    position: fixed;
+    border: solid 1px #ffffff;
+    border-radius: 100%;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+.mercury.orbit {
+    width: calc(2 * 1 * 100vw / 9);
+    height: calc(2 * 1 * 100vw / 9);
+}
+.venus.orbit {
+    width: calc(2 * 2 * 100vw / 9);
+    height: calc(2 * 2 * 100vw / 9);
+}
+.earth.orbit {
+    width: calc(2 * 3 * 100vw / 9);
+    height: calc(2 * 3 * 100vw / 9);
+}
+.mars.orbit {
+    width: calc(2 * 4 * 100vw / 9);
+    height: calc(2 * 4 * 100vw / 9);
+}
+.jupiter.orbit {
+    width: calc(2 * 5 * 100vw / 9);
+    height: calc(2 * 5 * 100vw / 9);
+}
+.saturn.orbit {
+    width: calc(2 * 6 * 100vw / 9);
+    height: calc(2 * 6 * 100vw / 9);
+}
+.uranus.orbit {
+    width: calc(2 * 7 * 100vw / 9);
+    height: calc(2 * 7 * 100vw / 9);
+}
+.neptune.orbit {
+    width: calc(2 * 8 * 100vw / 9);
+    height: calc(2 * 8 * 100vw / 9);
+}
+.pluto.orbit {
+    width: calc(2 * 9 * 100vw / 9);
+    height: calc(2 * 9 * 100vw / 9);
+    border-style: dashed;
+}
+
+.planet {
+    position: fixed;
+    z-index: 1;
+    border-radius: 100%;
+    max-width: calc(100vw/9 - 8px);
+    max-height: calc(100vw/9 - 8px);
+}
+.mercury.planet {
+    width: 25px;
+    height: 25px;
+    background: #502b1e;
+    transform: translate(-50%, -50%) rotate(30deg) translate(calc(1 * 100vw / 9), 0);
+}
+.venus.planet {
+    width: 33px;
+    height: 33px;
+    background: #bb8b2b;
+    transform: translate(-50%, -50%) rotate(70deg) translate(calc(2 * 100vw / 9), 0);
+}
+.earth.planet {
+    width: 40px;
+    height: 40px;
+    background: #2c792c;
+    transform: translate(-50%, -50%) rotate(60deg) translate(calc(3 * 100vw / 9), 0);
+}
+.mars.planet {
+    width: 50px;
+    height: 50px;
+    background: #8d2525;
+    transform: translate(-50%, -50%) rotate(30deg) translate(calc(4 * 100vw / 9), 0);
+}
+.jupiter.planet {
+    width: 100px;
+    height: 100px;
+    background: #a5512a;
+    transform: translate(-50%, -50%) rotate(15deg) translate(calc(5 * 100vw / 9), 0);
+}
+.saturn.planet {
+    width: 80px;
+    height: 80px;
+    background: #a79a1a;
+    transform: translate(-50%, -50%) rotate(50deg) translate(calc(6 * 100vw / 9), 0);
+}
+.uranus.planet {
+    width: 40px;
+    height: 40px;
+    background: #b2e3e6;
+    transform: translate(-50%, -50%) rotate(35deg) translate(calc(7 * 100vw / 9), 0);
+}
+.neptune.planet {
+    width: 40px;
+    height: 40px;
+    background: #677da3;
+    transform: translate(-50%, -50%) rotate(10deg) translate(calc(8 * 100vw / 9), 0);
+}
+.pluto.planet {
+    width: 15px;
+    height: 15px;
+    background: lightslategray;
+    transform: translate(-50%, -50%) rotate(17.5deg) translate(calc(9 * 100vw / 9), 0);
+}

@@ -7,6 +7,7 @@ body {
     position: fixed;
     background: #232323;
 }
+
 .magnified-display {
     height: 300px;
     width: 300px;
@@ -18,7 +19,59 @@ body {
     border-top: #a9a9a9 1px solid;
     border-right: #a9a9a9 1px solid;
     z-index: 10000;
+    overflow: hidden;
 }
+.display-container {
+    height: 100%;
+    width: 100%;
+}
+.display-container.neutral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.neutral > img.shuttle {
+    width: 75%;
+    height: 75%;
+    animation-name: literally-shaking-and-crying;
+    animation-duration: 0.25s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes literally-shaking-and-crying {
+    0% { transform: translate(1px, 1px); }
+    10% { transform: translate(-1px, -2px); }
+    20% { transform: translate(-3px, 0px); }
+    30% { transform: translate(3px, 2px); }
+    40% { transform: translate(1px, -1px); }
+    50% { transform: translate(-1px, 2px); }
+    60% { transform: translate(-3px, 1px); }
+    70% { transform: translate(3px, 1px); }
+    80% { transform: translate(-1px, -1px); }
+    90% { transform: translate(1px, 2px); }
+    100% { transform: translate(1px, -2px); }
+}
+
+.button {
+    border-radius: 4px;
+    background: #232323;
+    color: white;
+    border: 1px solid #494949;
+    padding: 4px;
+}
+.button:hover {
+    cursor: pointer;
+    background: #282828;
+    /*box-shadow: #494949 4px -4px 0 0;*/
+    /*border: 1px solid #494949;*/
+}
+.button.sleep {
+    position: fixed;
+    bottom: 8px;
+    right: 8px;
+    font-size: 2em;
+}
+
 .orbit {
     position: fixed;
     border: solid 1px #ffffff;
@@ -94,19 +147,19 @@ body {
     width: 50px;
     height: 50px;
     background: #8d2525;
-    transform: translate(-50%, -50%) rotate(30deg) translate(calc(4 * 100vw / 9), 0);
+    transform: translate(-50%, -50%) rotate(20deg) translate(calc(4 * 100vw / 9), 0);
 }
 .jupiter.planet {
     width: 100px;
     height: 100px;
     background: #a5512a;
-    transform: translate(-50%, -50%) rotate(15deg) translate(calc(5 * 100vw / 9), 0);
+    transform: translate(-50%, -50%) rotate(37.5deg) translate(calc(5 * 100vw / 9), 0);
 }
 .saturn.planet {
     width: 80px;
     height: 80px;
     background: #a79a1a;
-    transform: translate(-50%, -50%) rotate(50deg) translate(calc(6 * 100vw / 9), 0);
+    transform: translate(-50%, -50%) rotate(5deg) translate(calc(6 * 100vw / 9), 0);
 }
 .uranus.planet {
     width: 40px;

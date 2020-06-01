@@ -138,21 +138,21 @@ document.querySelector('.button.sleep').addEventListener('click', toggleSleepAct
 //literally one mission
 
 function redrawIndicator() {
-    let earthBound = document.querySelector('.planet.earth').getBoundingClientRect();
-    let earthPositionX = (earthBound.left + earthBound.right) / 2;
-    let earthPositionY = (earthBound.top + earthBound.bottom) / 2;
+    let marsBound = document.querySelector('.planet.mars').getBoundingClientRect();
+    let marsPositionX = (marsBound.left + marsBound.right) / 2;
+    let marsPositionY = (marsBound.top + marsBound.bottom) / 2;
     let neptuneBound = document.querySelector('.planet.neptune').getBoundingClientRect();
     let neptunePositionX = (neptuneBound.left + neptuneBound.right) / 2;
     let neptunePositionY = (neptuneBound.top + neptuneBound.bottom) / 2;
     let path = SVG('.path');
     path.attr({
-        x1: earthPositionX,
-        y1: earthPositionY,
+        x1: marsPositionX,
+        y1: marsPositionY,
         x2: neptunePositionX,
         y2: neptunePositionY
     });
     const progress = (total_points + pointsNow(points_escrow, time, last_wake, last_bedtime)) / MISSION_POINTS;
-    const x = (1 - progress) * earthPositionX + progress * neptunePositionX;
-    const y = (1 - progress) * earthPositionY + progress * neptunePositionY;
+    const x = (1 - progress) * marsPositionX + progress * neptunePositionX;
+    const y = (1 - progress) * marsPositionY + progress * neptunePositionY;
     document.querySelector('.spaceship-indicator').style = `left: ${x}px; top: ${y}px;`;
 }

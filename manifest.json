@@ -7,5 +7,16 @@
 
   "chrome_url_overrides": {
     "newtab": "dashboard.html"
-  }
+  },
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "permissions": [
+    "storage",
+    "notifications",
+    "alarms"
+  ]
 }

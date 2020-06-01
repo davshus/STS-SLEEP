@@ -6,6 +6,7 @@
     <link href="dashboard.css" rel="stylesheet" />
 </head>
 <body>
+
 <div class="space">
     <div class="mercury planet"></div>
     <div class="mercury orbit"></div>
@@ -32,9 +33,15 @@
         <img src="img/shuttle-neutral.png" class="shuttle" />
     </div>
 </div>
-<div class="button sleep">
+<div class="spaceship-indicator"></div>
+<div class="button sleep" style="display: none;">
     Over, out.
 </div>
+<div class="score-indicator">
+    <span class="score">
+    </span>
+</div>
+<script src="svg.min.js"></script>
 <script src="dashboard.js"></script>
 </body>
 </html>

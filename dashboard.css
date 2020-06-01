@@ -37,6 +37,7 @@ body {
     animation-duration: 0.25s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
+    z-index: 10000000;
 }
 @keyframes literally-shaking-and-crying {
     0% { transform: translate(1px, 1px); }
@@ -70,6 +71,7 @@ body {
     bottom: 8px;
     right: 8px;
     font-size: 2em;
+    z-index: 20000;
 }
 
 .orbit {
@@ -115,12 +117,12 @@ body {
 .pluto.orbit {
     width: calc(2 * 9 * 100vw / 9);
     height: calc(2 * 9 * 100vw / 9);
-    border-style: dashed;
+    border-style: dotted;
 }
 
 .planet {
     position: fixed;
-    z-index: 1;
+    z-index: 200;
     border-radius: 100%;
     max-width: calc(100vw/9 - 8px);
     max-height: calc(100vw/9 - 8px);
@@ -178,4 +180,59 @@ body {
     height: 15px;
     background: lightslategray;
     transform: translate(-50%, -50%) rotate(17.5deg) translate(calc(9 * 100vw / 9), 0);
+}
+
+svg {
+    z-index: 1;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+svg > .path {
+    z-index: 1;
+}
+
+.spaceship-indicator {
+    width: 20px;
+    height: 20px;
+    background: white;
+    position: fixed;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+@keyframes blink {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    25% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    75% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.score-indicator {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+    margin: 4px;
+}
+.score {
+    color: white;
+    font-size: 2em;
+    padding: 8px;
+    background: #232323;
+    border-radius: 8px;
+    font-family: monospace;
 }
